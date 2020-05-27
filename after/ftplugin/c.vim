@@ -23,8 +23,8 @@ setlocal incsearch
 let c_space_errors = 1
 
 abbrev printf printf("")
-abbrev if if () {<CR><CR>}
-abbrev else if () {<CR><CR>}<CR>else {<CR><CR>}
+abbrev ifs if () {<CR><CR>}
+abbrev elses if () {<CR><CR>}<CR>else {<CR><CR>}
 abbrev elsif if () {<CR><CR>}<CR>elif (){<CR><CR>}
 abbrev ifelsif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
 abbrev for for(; ; ){<CR><CR>}
