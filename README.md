@@ -22,7 +22,7 @@ The year on the first line is automatically set based on the current date.
 
 If you use VimPlug, add this to your `.vimrc` (or `~/.config/nvim/init.vim` if
 you're using Neovim):
-```
+```vim
 Plug 'Heliferepo/VimTek'
 ```
 
@@ -33,9 +33,13 @@ You can also use the `:EpiHeader` command.
 
 To remap your Leader key add o your .vimrc :
 
-```
+```vim
 let mapleader = "thekey"
 ```
+
+Sometime even if you add .c on WSL (for example) it won't detect the filetype so you can use `<Leader> c` it will set before filetype=c
+
+This can also solve trailing space problem that won't show or c syntax not highlighted
 
 ## Coding Style
 
@@ -43,7 +47,6 @@ Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
 - Use 4 spaces for indenting
 - Show trailing whitespaces
 - Expand `<Tab>` to four spaces
-- Filetype is c (When Header is set)
 
 ## Differences with the original repository
 
@@ -109,4 +112,29 @@ Set filetype as c when EpiHeader is set if you don't want EpiHeader to set the f
 
 ```vim
 nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
+```
+
+##My advices
+
+Please do not use other colorscheme than the defaults one they are well made not too flashy and everything. I have been a longtime user of gruvbox but you will notice that it's really useless. Peachpuff is generally set by default and does c syntax pretty well. You can set it permanently by typing that in your ~/.vimrc
+
+```vim
+colorscheme peachpuff
+```
+
+You would also consider to use Undotree plugin and set custom noswap an undodir and set leaderkey as 'space' :
+
+```vim
+syntax on
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+let mapleader = " "
+
+nnoremap <leader>u :UndotreeShow<CR>
+
+/* and the plug
+Plug 'mbbill/undotree'
 ```
