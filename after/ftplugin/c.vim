@@ -21,3 +21,31 @@ setlocal undofile
 setlocal incsearch
 
 let c_space_errors = 1
+
+abbrev printf printf("")
+abbrev ( ()
+abbrev if if () {<CR><CR>}
+abbrev else if () {<CR><CR>}<CR>else {<CR><CR>}
+abbrev elslif if () {<CR><CR>}<CR>elif (){<CR><CR>}
+abbrev ifslif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
+abbrev for for(; ; ){<CR><CR>}
+abbrev while () {<CR><CR>}
+abbrev malloc (type)malloc(size * sizeof(type));
+abbrev stdio #include <stdio.h>
+abbrev unistd #include <unistd.h>
+abbrev stdlib #include <stdlib.h>
+abbrev mainf int main(void)<CR>{<CR>return (0);<CR>}
+abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);<CR>}
+abbrev intf int funct(arg)<CR>{<CR>return (an int);<CR>}
+abbrev charf char funct(arg)<CR>{<CR>return (a char);<CR>}
+abbrev strf char *funct(arg)<CR>{<CR>return (a *char);<CR>}
+abbrev voidf void funct(arg)<CR>{<CR>foo<CR>}
+abbrev sof sizeof()
+abbrev write write(out, char, nofchar);
+abbrev ret return ();
+abbrev fprintf fprintf(file, "text");
+abbrev fopen fopen(file)
+abbrev fclose fclose(file)
+abbrev switch switch( condition ) {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>}
+abbrev do do {<CR><CR>} while ( condition );
+abbrev struct struct name {<CR><CR>};
