@@ -75,13 +75,14 @@ setlocal incsearch
 ```
 Setted abbreviations
 
+Please make sure to write somthing before a set the header otherwise abbrev can have issues
+
 ```vim
 abbrev printf printf("")
-abbrev ( ()
 abbrev if if () {<CR><CR>}
 abbrev else if () {<CR><CR>}<CR>else {<CR><CR>}
-abbrev elslif if () {<CR><CR>}<CR>elif (){<CR><CR>}
-abbrev ifslif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
+abbrev elsif if () {<CR><CR>}<CR>elif (){<CR><CR>}
+abbrev ifeslif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
 abbrev for for(; ; ){<CR><CR>}
 abbrev while () {<CR><CR>}
 abbrev malloc (type)malloc(size * sizeof(type));
@@ -90,12 +91,12 @@ abbrev unistd #include <unistd.h>
 abbrev stdlib #include <stdlib.h>
 abbrev mainf int main(void)<CR>{<CR>return (0);<CR>}
 abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);<CR>}
-abbrev intf int funct(arg)<CR>{<CR>return (an int);<CR>}
-abbrev charf char funct(arg)<CR>{<CR>return (a char);<CR>}
-abbrev strf char *funct(arg)<CR>{<CR>return (a *char);<CR>}
+abbrev intf int funct(arg)<CR>{<CR>return (int);<CR>}
+abbrev charf char funct(arg)<CR>{<CR>return (char);<CR>}
+abbrev strf char *funct(arg)<CR>{<CR>return (char*);<CR>}
 abbrev voidf void funct(arg)<CR>{<CR>foo<CR>}
 abbrev sof sizeof()
-abbrev write write(out, char, nofchar);
+abbrev write write(, , );
 abbrev ret return ();
 abbrev fprintf fprintf(file, "text");
 abbrev fopen fopen(file)
@@ -104,6 +105,8 @@ abbrev switch switch( condition ) {<CR>case '?':<CR>break;<CR>case '?':<CR>break
 abbrev do do {<CR><CR>} while ( condition );
 abbrev struct struct name {<CR><CR>};
 ```
+
+If you have any abbreviations suggestions please let me know at mattisdalleau@gmail.com or do a PR
 
 ```vim
 nmap <Leader>t :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
@@ -135,6 +138,5 @@ let mapleader = " "
 
 nnoremap <leader>u :UndotreeShow<CR>
 
-/* and the plug
 Plug 'mbbill/undotree'
 ```
