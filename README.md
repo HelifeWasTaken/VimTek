@@ -34,7 +34,11 @@ You can also use the `:EpiHeader` command.
 To remap your Leader key add o your .vimrc :
 
 ```vim
-let mapleader = "thekey"
+let mapleader = "key"
+
+"I strongly suggest to use space leaderkey :
+
+let mapleader = " "
 ```
 
 Sometime even if you add .c on WSL (for example) it won't detect the filetype so you can use `<Leader> c` it will set before filetype=c
@@ -75,14 +79,14 @@ setlocal incsearch
 ```
 Setted abbreviations
 
-Please make sure to write somthing before a set the header otherwise abbrev can have issues
+Please make sure to write somthing before using the abbreviations or set the header otherwise abbrev can have issues
 
 ```vim
 abbrev printf printf("")
-abbrev if if () {<CR><CR>}
-abbrev else if () {<CR><CR>}<CR>else {<CR><CR>}
+abbrev ifs if () {<CR><CR>}
+abbrev elses if () {<CR><CR>}<CR>else {<CR><CR>}
 abbrev elsif if () {<CR><CR>}<CR>elif (){<CR><CR>}
-abbrev ifeslif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
+abbrev ifelsif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
 abbrev for for(; ; ){<CR><CR>}
 abbrev while () {<CR><CR>}
 abbrev malloc (type)malloc(size * sizeof(type));
@@ -106,8 +110,6 @@ abbrev do do {<CR><CR>} while ( condition );
 abbrev struct struct name {<CR><CR>};
 ```
 
-If you have any abbreviations suggestions please let me know at mattisdalleau@gmail.com or do a PR
-
 ```vim
 nmap <Leader>t :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
 ```
@@ -119,7 +121,7 @@ nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
 
 ## My advices
 
-Please do not use other colorscheme than the defaults one they are well made not too flashy and everything. 
+Please do not use other colorscheme than the defaults one they are well made not too flashy and (etc...)
 
 I have been a longtime user of gruvbox but you will notice that it's really useless. Peachpuff is generally set by default and does c syntax pretty well.
 
@@ -144,3 +146,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 
 Plug 'mbbill/undotree'
 ```
+If you have any suggestions please let me know on :
+
+1. Email : mattisdalleau@gmail.com
+2. Pull Request : You have develeopped your own version please check the template of the repository
+3. Issue : Check the request feature Template
