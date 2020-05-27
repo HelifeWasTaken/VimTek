@@ -117,15 +117,19 @@ Set filetype as c when EpiHeader is set if you don't want EpiHeader to set the f
 nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
 ```
 
-##My advices
+## My advices
 
-Please do not use other colorscheme than the defaults one they are well made not too flashy and everything. I have been a longtime user of gruvbox but you will notice that it's really useless. Peachpuff is generally set by default and does c syntax pretty well. You can set it permanently by typing that in your ~/.vimrc
+Please do not use other colorscheme than the defaults one they are well made not too flashy and everything. 
+
+I have been a longtime user of gruvbox but you will notice that it's really useless. Peachpuff is generally set by default and does c syntax pretty well.
+
+You can set it permanently by typing that in your ~/.vimrc
 
 ```vim
 colorscheme peachpuff
 ```
 
-You would also consider to use Undotree plugin and set custom noswap an undodir and set leaderkey as 'space' :
+You would also consider to use Undotree plugin set noswap undodir turn on syntax and change leaderkey as 'space' :
 
 ```vim
 syntax on
