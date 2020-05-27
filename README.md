@@ -51,6 +51,12 @@ Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
 - Use 4 spaces for indenting
 - Show trailing whitespaces
 - Expand `<Tab>` to four spaces
+- It happend a lot to forget a little printf that we used to debug in our code to make sure we don't forget anything we can use :
+
+```vim
+<Leader>nc /* To Higlight printf()
+<Leader>ns /* To remove the Higlighting
+```
 
 ## Differences with the original repository
 
@@ -82,29 +88,24 @@ Setted abbreviations
 Please make sure to write somthing before using the abbreviations or set the header otherwise abbrev can have issues
 
 ```vim
-abbrev printf printf("")
-abbrev ifs if () {<CR><CR>}
-abbrev elses if () {<CR><CR>}<CR>else {<CR><CR>}
+abbrev iff if () {<CR><CR>}
+abbrev elsef if () {<CR><CR>}<CR>else {<CR><CR>}
 abbrev elsif if () {<CR><CR>}<CR>elif (){<CR><CR>}
 abbrev ifelsif if () {<CR><CR>}<CR>elif (){<CR><CR>}<CR>else {<CR><CR>}
 abbrev for for(; ; ){<CR><CR>}
 abbrev while () {<CR><CR>}
 abbrev malloc (type)malloc(size * sizeof(type));
-abbrev stdio #include <stdio.h>
-abbrev unistd #include <unistd.h>
-abbrev stdlib #include <stdlib.h>
+abbrev incstdio #include <stdio.h>
+abbrev incunistd #include <unistd.h>
+abbrev incstdlib #include <stdlib.h>
 abbrev mainf int main(void)<CR>{<CR>return (0);<CR>}
 abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);<CR>}
 abbrev intf int funct(arg)<CR>{<CR>return (int);<CR>}
 abbrev charf char funct(arg)<CR>{<CR>return (char);<CR>}
 abbrev strf char *funct(arg)<CR>{<CR>return (char*);<CR>}
 abbrev voidf void funct(arg)<CR>{<CR>foo<CR>}
-abbrev sof sizeof()
 abbrev write write(, , );
 abbrev ret return ();
-abbrev fprintf fprintf(file, "text");
-abbrev fopen fopen(file)
-abbrev fclose fclose(file)
 abbrev switch switch( condition ) {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>}
 abbrev do do {<CR><CR>} while ( condition );
 abbrev struct struct name {<CR><CR>};
@@ -117,6 +118,11 @@ Set filetype as c when EpiHeader is set if you don't want EpiHeader to set the f
 
 ```vim
 nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
+```
+
+```vim
+nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR>
+nmap <Leader>ns :set nohlsearch<CR>
 ```
 
 ## My advices
@@ -148,6 +154,9 @@ Plug 'mbbill/undotree'
 ```
 If you have any suggestions please let me know on :
 
-1. Email : mattisdalleau@gmail.com
-2. Pull Request : You have develeopped your own version please check the template of the repository
-3. Issue : Check the request feature Template
+
+## To contribute or to report a bug
+
+1. Pull Request : You have develeopped your own version please check the template of the repository
+2. Issue : Check the feature (request) or bug Template
+3. Email : mattisdalleau@gmail.com
