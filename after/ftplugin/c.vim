@@ -13,11 +13,8 @@ setlocal tabstop=4
 setlocal softtabstop=0
 setlocal expandtab
 setlocal shiftwidth=4
-setlocal nu
 setlocal noerrorbells
 setlocal nowrap
-setlocal undodir=~/.vim/undodir
-setlocal undofile
 setlocal incsearch
 
 let c_space_errors = 1
@@ -32,6 +29,8 @@ abbrev mallocf (type)malloc(size * sizeof(type));
 abbrev incstdio #include <stdio.h>
 abbrev incunistd #include <unistd.h>
 abbrev incstdlib #include <stdlib.h>
+abbrev incmath #include <math.h>
+abbrev incstring #include <string.h>
 abbrev mainf int main( void )<CR>{<CR>return (0);<CR>}
 abbrev mainargf int main( int argc, char **argv[] )<CR>{<CR>return (0);<CR>}
 abbrev intf int funct()<CR>{<CR>return (int);<CR>}
