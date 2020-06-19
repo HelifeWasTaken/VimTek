@@ -31,13 +31,13 @@ abbrev incunistd #include <unistd.h>
 abbrev incstdlib #include <stdlib.h>
 abbrev incmath #include <math.h>
 abbrev incstring #include <string.h>
-abbrev mainf int main( void )<CR>{<CR>return (0);<CR>}
-abbrev mainargf int main( int argc, char **argv[] )<CR>{<CR>return (0);<CR>}
+abbrev mainf int main(void)<CR>{<CR>return (0);<CR>}
+abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);<CR>}
 abbrev intf int funct()<CR>{<CR>return (int);<CR>}
 abbrev charf char funct()<CR>{<CR>return (char);<CR>}
 abbrev strf char *funct(arg)<CR>{<CR>return (char*);<CR>}
 abbrev voidf void funct()<CR>{<CR>foo<CR>}
 abbrev writef write();
-abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>}
+abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>default:<CR>break<CR>}
 abbrev dof do {<CR><CR>} while ( );
 abbrev structf struct name {<CR><CR>};
