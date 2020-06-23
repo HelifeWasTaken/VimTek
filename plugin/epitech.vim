@@ -1,10 +1,11 @@
 if exists('g:loaded_epitech')
     finish
 endif
+
 let g:loaded_epitech = 1
 
 if !exists('g:header_auto')
-  let g:header_auto = 0
+  let g:header_auto = 1
 endif
 
 command! EpiHeader call epitech#header#Put()
