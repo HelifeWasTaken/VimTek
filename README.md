@@ -31,8 +31,6 @@ Plug 'Heliferepo/VimTek'
 You can add Epitech headers to your files with `<Leader>t` (so `\t` by default).
 You can also use the `:EpiHeader` command.
 
-> With the "new" version EpiHeader is activated if you get in a c family file
-
 To remap your Leader key add o your .vimrc :
 
 ```vim

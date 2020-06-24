@@ -2,7 +2,7 @@ if exists('g:loaded_epitech')
     finish
 endif
 
-let g:loaded_epitech = 1
+let g:loaded_epitech = 0
 
 if !exists('g:header_auto')
   let g:header_auto = 1
