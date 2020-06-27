@@ -26,6 +26,10 @@ you're using Neovim):
 Plug 'Heliferepo/VimTek'
 ```
 
+## Warning
+
+If you use UndoTree do not use auto put
+
 ## Headers
 
 You can add Epitech headers to your files with `<Leader>t` (so `\t` by default).
