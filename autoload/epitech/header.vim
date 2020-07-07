@@ -35,7 +35,7 @@ endfunction
 
 function! epitech#header#Put()
     if !s:IsSupportedFt()
-        echoerr "Epitech header: Unsupported filetype: " . &filetype
+        echoerr "Epitech header: Unsupported filetype: " . &filetype . " If you think this an error or you want an additional filetype please contact me :)"
         return
     endif
 
