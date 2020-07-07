@@ -19,12 +19,12 @@ setlocal incsearch
 
 let c_space_errors = 1
 
-abbrev iff if () {<CR><CR>}
-abbrev elsef if () {<CR><CR>} else {<CR><CR>}
-abbrev elsif if () {<CR><CR>} elif () {<CR><CR>}
-abbrev ifelsif if () {<CR><CR>} elif () {<CR><CR>} else {<CR><CR>}
-abbrev forf for(  ) {<CR><CR>}
-abbrev whilef while () {<CR><CR>}
+abbrev iff if () {<CR>a<CR>}
+abbrev elsef if () {<CR>a<CR>} else {<CR>a<CR>}
+abbrev elsif if () {<CR>a<CR>} elif () {<CR>a<CR>}
+abbrev ifelsif if () {<CR>a<CR>} elif () {<CR>a<CR>} else {<CR>a<CR>}
+abbrev forf for() {<CR>a<CR>}
+abbrev whilef while () {<CR>a<CR>}
 abbrev mallocf (type)malloc(size * sizeof(type));
 abbrev incstdio #include <stdio.h>
 abbrev incunistd #include <unistd.h>
@@ -37,7 +37,6 @@ abbrev intf int funct()<CR>{<CR>return (int);<CR>}
 abbrev charf char funct()<CR>{<CR>return (char);<CR>}
 abbrev strf char *funct(arg)<CR>{<CR>return (char*);<CR>}
 abbrev voidf void funct()<CR>{<CR>foo<CR>}
-abbrev writef write();
 abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>default:<CR>break<CR>}
 abbrev dof do {<CR><CR>} while ( );
 abbrev structf struct name {<CR><CR>};
