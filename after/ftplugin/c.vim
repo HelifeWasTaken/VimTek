@@ -44,3 +44,5 @@ abbrev structf struct name {<CR><CR>};
 inoremap {<CR> {<CR>}<Esc>O
 inoremap (<CR> (<CR>)<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
+
+nnoremap <leader>ai magg=G`a
