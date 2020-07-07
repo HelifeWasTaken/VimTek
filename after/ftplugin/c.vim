@@ -58,3 +58,13 @@ function! CleanThatUglySpace() "Function to clean unwanted spaces
 endfun
 
 autocmd BufWritePre * :call CleanThatUglySpace()
+
+set fileformat=unix
+
+setglobal termencoding=utf-8 fileencodings=
+scriptencoding utf-8
+set encoding=utf-8
+
+autocmd BufNewFile,BufRead  *   try
+autocmd BufNewFile,BufRead  *   set encoding=utf-8
+autocmd BufNewFile,BufRead  *   endtry
