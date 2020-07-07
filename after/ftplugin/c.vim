@@ -40,3 +40,7 @@ abbrev voidf void funct()<CR>{<CR>foo<CR>}
 abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>default:<CR>break<CR>}
 abbrev dof do {<CR><CR>} while ( );
 abbrev structf struct name {<CR><CR>};
+
+inoremap {<CR> {<CR>}<Esc>O
+inoremap (<CR> (<CR>)<Esc>O
+inoremap [<CR> [<CR>]<Esc>O
