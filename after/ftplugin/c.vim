@@ -46,3 +46,5 @@ inoremap (<CR> (<CR>)<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
 
 nnoremap <leader>ai magg=G`a
+
+nnoremap <leader>r yiw:%s/\<<C-r>"\>//g<left><left>
