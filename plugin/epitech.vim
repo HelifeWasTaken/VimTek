@@ -18,7 +18,7 @@ augroup epitech
     endif
 augroup END
 
-nmap <Leader>c :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
-nmap <Leader>t :<C-U>EpiHeader<CR>
+map <F3> :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
+map <F2> :<C-U>EpiHeader<CR>
 nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR>
 nmap <Leader>ns :set nohlsearch<CR>
