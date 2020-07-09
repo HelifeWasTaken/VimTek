@@ -47,9 +47,7 @@ inoremap [<CR> [<CR>]<Esc>O
 
 nnoremap <leader>ai magg=G`a
 
-nnoremap <leader>r yiw:%s/\<<C-r>"\>//g<left><left>
-
-function! CleanThatUglySpace() "Function to clean unwanted spaces
+function! CleanExtraSpaces() "Function to clean unwanted spaces
     let save_cursor = getpos(".")
     let old_query = getreg('/')
     silent! %s/\s\+$//e
@@ -57,7 +55,8 @@ function! CleanThatUglySpace() "Function to clean unwanted spaces
     call setreg('/', old_query)
 endfun
 
-autocmd BufWritePre * :call CleanThatUglySpace()
+autocmd BufWritePre * :call CleanExtraSpaces()
+"call CleanExtraSpaces to remove unwanted spaces when saving
 
 set fileformat=unix
 
