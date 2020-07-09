@@ -58,6 +58,19 @@ endfun
 autocmd BufWritePre * :call CleanExtraSpaces()
 "call CleanExtraSpaces to remove unwanted spaces when saving
 
+function! Therenamer(word)
+   let s:replace = a:word
+   echohl Question
+   let s:replace = input("Replace with: ", a:word)
+   echohl None
+   exec "%s/" . a:word . "/" . s:replace . "/g"
+endfunction
+
+command! Renamer call feedkeys("\yiw :call Therenamer(\"\<C-r>\"\")")
+
+nnoremap <leader>r :Renamer
+imap <C-r>r <Esc>:Renamer
+
 set fileformat=unix
 
 setglobal termencoding=utf-8 fileencodings=
