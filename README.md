@@ -28,24 +28,15 @@ Plug 'Heliferepo/VimTek'
 
 ## Warning
 
-If you use UndoTree do not use auto put
+If you like to use multiple screens in one instance of Vim (not tmux) do not use auto put
 
 ## Headers
 
-You can add Epitech headers to your files with `<Leader>t` (so `\t` by default).
+You can add Epitech headers to your files with `<F2>` (so `<F2>` by default).
+
 You can also use the `:EpiHeader` command.
 
-To remap your Leader key add o your .vimrc :
-
-```vim
-let mapleader = "key"
-
-"I strongly suggest to use space leaderkey :
-
-let mapleader = " "
-```
-
-Sometime even if you add .c on WSL (for example) it won't detect the filetype so you can use `<Leader> c` it will set before filetype=c
+Sometime even if you add .c on WSL (for example) it won't detect the filetype so you can use `<F3>` it will set before filetype=c
 
 This can also solve trailing space problem that won't show or c syntax not highlighted
 
@@ -58,8 +49,8 @@ Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
 - It happend a lot to forget a little printf that we used to debug in our code to make sure we don't forget anything we can use :
 
 ```vim
-<Leader>nc /* To Higlight printf()
-<Leader>ns /* To remove the Higlighting
+nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR> * To Higlight printf()
+nmap <Leader>ns :set nohlsearch<CR> * To remove the Higlighting
 ```
 
 ## Differences with the original repository
@@ -80,7 +71,6 @@ _E.g. `g:header_update`, `g:epi_login` etc._
 
 ```vim
 execute "setlocal colorcolumn=81"
-setlocal nu
 setlocal noerrorbells
 setlocal nowrap
 setlocal undodir=~/.vim/undodir
@@ -152,17 +142,21 @@ nnoremap <leader>r :Renamer
 imap <C-r>r <Esc>:Renamer
 ```
 
+Set filetype as c when EpiHeader is set
 ```vim
 nmap <Leader>t :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
-```
-Set filetype as c when EpiHeader is set if you don't want EpiHeader to set the file as c add :
+``` 
 
+If you don't want EpiHeader to set the file as c add :
 ```vim
 nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
 ```
-
+To Higlight printf()
 ```vim
 nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR>
+```
+To remove the highlighting of printf()
+```vim
 nmap <Leader>ns :set nohlsearch<CR>
 ```
 
@@ -188,11 +182,16 @@ Please do not use other colorscheme than the defaults one they are well made not
 
 I have been a longtime user of gruvbox but you will notice that it's really useless. Peachpuff is generally set by default and does c syntax pretty well.
 
-You can set it permanently by typing that in your ~/.vimrc
+To remap your Leader key add o your .vimrc :
 
 ```vim
-colorscheme peachpuff
+let mapleader = "key"
+
+"I strongly suggest to use space leaderkey :
+
+let mapleader = " "
 ```
+
 
 You would also consider to use Undotree plugin set noswap undodir turn on syntax and change leaderkey as 'space' :
 
