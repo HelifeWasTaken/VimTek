@@ -92,26 +92,64 @@ Setted abbreviations
 Please make sure to write somthing before using the abbreviations or set the header otherwise abbrev can have issues
 
 ```vim
-abbrev iff if () {<CR><CR>}
-abbrev elsef if () {<CR><CR>} else {<CR><CR>}
-abbrev elsif if () {<CR><CR>} elif () {<CR><CR>}
-abbrev ifelsif if () {<CR><CR>} elif () {<CR><CR>} else {<CR><CR>}
-abbrev forf for(  ) {<CR><CR>}
-abbrev whilef while () {<CR><CR>}
+abbrev iff if () {<CR>a<CR>}
+abbrev elsef if () {<CR>a<CR>} else {<CR>a<CR>}
+abbrev elsif if () {<CR>a<CR>} elif () {<CR>a<CR>}
+abbrev ifelsif if () {<CR>a<CR>} elif () {<CR>a<CR>} else {<CR>a<CR>}
+abbrev forf for() {<CR>a<CR>}
+abbrev whilef while () {<CR>a<CR>}
 abbrev mallocf (type)malloc(size * sizeof(type));
 abbrev incstdio #include <stdio.h>
 abbrev incunistd #include <unistd.h>
 abbrev incstdlib #include <stdlib.h>
-abbrev mainf int main( void )<CR>{<CR>return (0);<CR>}
-abbrev mainargf int main( int argc, char **argv[] )<CR>{<CR>return (0);<CR>}
+abbrev incmath #include <math.h>
+abbrev incstring #include <string.h>
+abbrev mainf int main(void)<CR>{<CR>return (0);<CR>}
+abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);<CR>}
 abbrev intf int funct()<CR>{<CR>return (int);<CR>}
 abbrev charf char funct()<CR>{<CR>return (char);<CR>}
 abbrev strf char *funct(arg)<CR>{<CR>return (char*);<CR>}
 abbrev voidf void funct()<CR>{<CR>foo<CR>}
-abbrev writef write();
-abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>}
+abbrev switchf switch() {<CR>case '?':<CR>break;<CR>case '?':<CR>break;<CR>default:<CR>break<CR>}
 abbrev dof do {<CR><CR>} while ( );
 abbrev structf struct name {<CR><CR>};
+```
+
+The  { \[ and ( multiple lines indentation are made automatically with 
+
+```vim
+inoremap {<CR> {<CR>}<Esc>O
+inoremap (<CR> (<CR>)<Esc>O
+inoremap [<CR> [<CR>]<Esc>O
+```
+
+Uwanted spaces are clean automatically when you save with : 
+```vim
+function! CleanExtraSpaces() "Function to clean unwanted spaces
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+autocmd BufWritePre * :call CleanExtraSpaces()
+```
+
+I added change a change all occurences function that occure when you press `<leader>r` in normal mode and `<C-r>r` in insertion mode
+```vim
+function! Therenamer(word)
+   let s:replace = a:word
+   echohl Question
+   let s:replace = input("Replace with: ", a:word)
+   echohl None
+   exec "%s/" . a:word . "/" . s:replace . "/g"
+endfunction
+
+command! Renamer call feedkeys("\yiw :call Therenamer(\"\<C-r>\"\")")
+
+nnoremap <leader>r :Renamer
+imap <C-r>r <Esc>:Renamer
 ```
 
 ```vim
@@ -126,6 +164,22 @@ nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
 ```vim
 nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR>
 nmap <Leader>ns :set nohlsearch<CR>
+```
+
+"Optional" :
+
+I made sure that everytime you write on your file you are set on unix utf-8 :
+
+```vim
+set fileformat=unix
+
+setglobal termencoding=utf-8 fileencodings=
+scriptencoding utf-8
+set encoding=utf-8
+
+autocmd BufNewFile,BufRead  *   try
+autocmd BufNewFile,BufRead  *   set encoding=utf-8
+autocmd BufNewFile,BufRead  *   endtry
 ```
 
 ## My advices
