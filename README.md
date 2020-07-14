@@ -33,7 +33,7 @@ If you like to use multiple screens in one instance of Vim (not tmux) do not use
 
 ## Headers
 
-You can add Epitech headers to your files with `<F2>` (so `<F2>` by default).
+You can add Epitech headers to your files with `<F2>`
 
 You can also use the `:EpiHeader` command.
 
@@ -50,8 +50,8 @@ Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
 - It happend a lot to forget a little printf that we used to debug in our code to make sure we don't forget anything we can use :
 
 ```vim
-nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR> * To Higlight printf()
-nmap <Leader>ns :set nohlsearch<CR> * To remove the Higlighting
+nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR> " To Higlight printf()
+nmap <Leader>ns :set nohlsearch<CR> " To remove the Higlighting
 ```
 
 ## Differences with the original repository
@@ -72,10 +72,7 @@ _E.g. `g:header_update`, `g:epi_login` etc._
 
 ```vim
 execute "setlocal colorcolumn=81"
-setlocal noerrorbells
 setlocal nowrap
-setlocal undodir=~/.vim/undodir
-setlocal undofile
 setlocal incsearch
 ```
 Setted abbreviations
@@ -209,8 +206,6 @@ nnoremap <leader>u :UndotreeShow<CR>
 
 Plug 'mbbill/undotree'
 ```
-If you have any suggestions please let me know on :
-
 
 ## To contribute or to report a bug
 
