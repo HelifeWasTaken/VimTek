@@ -19,8 +19,8 @@ if (&ft == 'c')
 
     abbrev iff if () {<CR>a<CR>}
     abbrev elsef if () {<CR>a<CR>} else {<CR>a<CR>}
-    abbrev elsif if () {<CR>a<CR>} elif () {<CR>a<CR>}
-    abbrev ifelsif if () {<CR>a<CR>} elif () {<CR>a<CR>} else {<CR>a<CR>}
+    abbrev elsif if () {<CR>a<CR>} else if () {<CR>a<CR>}
+    abbrev ifelsif if () {<CR>a<CR>} else if () {<CR>a<CR>} else {<CR>a<CR>}
     abbrev forf for() {<CR>a<CR>}
     abbrev whilef while () {<CR>a<CR>}
     abbrev mallocf (type)malloc(size * sizeof(type));
