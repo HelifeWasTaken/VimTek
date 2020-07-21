@@ -22,11 +22,18 @@ if (&ft == 'c')
     abbrev forf for() {<CR>
     abbrev whilef while () {<CR>
     abbrev mallocf (type)malloc(size * sizeof(type));
+
     abbrev incstdio #include <stdio.h>
     abbrev incunistd #include <unistd.h>
-    abbrev incstdlib #include <stdlib.h>
+    abbrev inclib #include <stdlib.h>
     abbrev incmath #include <math.h>
     abbrev incstring #include <string.h>
+    abbrev incmy #include <my.h>
+    abbrev incbool #include <stdbool.h>
+    abbrev inccdef #include <cdefs.h>
+    abbrev incdef #include <stddef.h>
+    abbrev incint #include <stdint.h>
+
     abbrev mainf int main(void)<CR>{<CR>return (0);
     abbrev mainargf int main(int argc, char **argv)<CR>{<CR>return (0);
     abbrev intf int f()<CR>{<CR>return (int);
