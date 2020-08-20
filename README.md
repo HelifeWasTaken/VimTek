@@ -68,7 +68,7 @@ Copy. Anything. From. The. PDF. NEVER. Trust me._
 - A lot of useless code now that the headers have changed and are far smaller -
 _E.g. `g:header_update`, `g:epi_login` etc._
 
-## What is new from other repositories
+## What is new from other repositories (EDIT : everything that was new in this repo has been moved into a repository called VimUtils -> Except for EpiHeader)
 
 ```vim
 execute "setlocal colorcolumn=81"
@@ -188,23 +188,6 @@ let mapleader = "key"
 "I strongly suggest to use space leaderkey :
 
 let mapleader = " "
-```
-
-
-You would also consider to use Undotree plugin set noswap undodir turn on syntax and change leaderkey as 'space' :
-
-```vim
-syntax on
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-
-let mapleader = " "
-
-nnoremap <leader>u :UndotreeShow<CR>
-
-Plug 'mbbill/undotree'
 ```
 
 ## To contribute or to report a bug
