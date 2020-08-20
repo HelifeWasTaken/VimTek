@@ -28,7 +28,7 @@ Plug 'Heliferepo/VimTek'
 
 ## Warning
 
-If you like to use multiple screens in one instance of Vim (not tmux) do not use auto put
+If you like to use multiple screens in one instance of Vim (except tmux) do not use auto put header
 > Also if you use plugins as Undotree 
 
 ## Headers
