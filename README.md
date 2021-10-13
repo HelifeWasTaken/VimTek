@@ -1,5 +1,3 @@
-THIS REPOSITORY IS A FORK OF [VIM-EPITECH](https://github.com/Le-Bit/vim-epitech)
-
 VimTek
 ===========
 
