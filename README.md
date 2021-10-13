@@ -23,6 +23,10 @@ you're using Neovim):
 ```vim
 Plug 'Heliferepo/VimTek'
 ```
+Really consider using also [VimUtils](https://github.com/Heliferepo/VimUtils)
+```vim
+Plug 'Helifrepo/VimUtils'
+```
 
 ## Warning
 
