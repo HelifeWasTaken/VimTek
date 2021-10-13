@@ -5,7 +5,7 @@ VimTek
 
 An all-in-one configuration to ease (n)vim usage at EPITECH.
 
-This plugin version generates the headers of 2019):
+This plugin version generates the headers of 2021):
 
 ```c
 /*
@@ -43,16 +43,10 @@ This can also solve trailing space problem that won't show or c syntax not highl
 
 ## Coding Style
 
-Some settings are setup to ease compliance with the EPITECH C Coding Style v3.1:
+Some settings are setup to ease compliance with the EPITECH C Coding Style v4.3:
 - Use 4 spaces for indenting
 - Show trailing whitespaces
 - Expand `<Tab>` to four spaces
-- It happend a lot to forget a little printf that we used to debug in our code to make sure we don't forget anything we can use :
-
-```vim
-nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR> " To Higlight printf()
-nmap <Leader>ns :set nohlsearch<CR> " To remove the Higlighting
-```
 
 ## Differences with the original repository
 
