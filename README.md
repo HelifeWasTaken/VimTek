@@ -109,24 +109,6 @@ nnoremap <leader>r :Renamer
 imap <C-r>r <Esc>:Renamer
 ```
 
-Set filetype as c when EpiHeader is set
-```vim
-nmap <Leader>t :set filetype=c<CR><bar>:<C-U>EpiHeader<CR>
-``` 
-
-If you don't want EpiHeader to set the file as c add :
-```vim
-nmap <Leader>'keywanted' :<C-U>EpiHeader<CR>
-```
-To Higlight printf()
-```vim
-nmap <Leader>nc :set hlsearch<bar>/\vprintf<CR>
-```
-To remove the highlighting of printf()
-```vim
-nmap <Leader>ns :set nohlsearch<CR>
-```
-
 "Optional" :
 
 I made sure that everytime you write on your file you are set on unix utf-8 :
